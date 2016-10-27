@@ -1,0 +1,50 @@
+{
+  "name": "expresstest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "start": "node app.js"
+  },
+  "author": {
+    "name": "Karl Groves",
+    "email": "karl@karlgroves.com",
+    "url": "http://www.karlgroves.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bunyan": "^1.8.3",
+    "debug": "^2.2.0",
+    "express": "^4.14.0",
+    "express-form": "^0.12.6",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.14.1",
+    "node-uuid": "^1.4.7",
+    "pm2": "^2.0.18",
+    "serve-favicon": "^2.3.0",
+    "session-file-store": "^0.2.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-githooks": "^0.6.0",
+    "grunt-jsonlint": "^1.1.0",
+    "grunt-travis-lint": "0.0.3",
+    "jshint-stylish": "^2.2.1",
+    "load-grunt-tasks": "^3.5.2",
+    "nodemon": "^1.11.0",
+    "time-grunt": "^1.4.0"
+  },
+  "engines": {
+    "node": ">=6.9.0"
+  }
+}

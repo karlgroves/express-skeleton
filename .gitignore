@@ -1,0 +1,39 @@
+/dist/
+.sass-cache/*
+*.iml
+
+# -*- mode: gitignore; -*-
+node_modules
+.DS_Store
+npm-debug.log
+/*.env
+app/css/main.css
+app/css/main.css.map
+
+
+### PHP storm ###
+.idea
+.idea/*
+.idea/workspace.xml
+atlassian-ide-plugin.xml
+.settings
+
+### vim ###
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+### Emacs ###
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+
+phantomjsdriver.log
