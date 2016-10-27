@@ -51,7 +51,7 @@ app.use(bodyParser.json()); // support json encoded bodies
 
 //app.use(express.static('public'));
 
-app.use('/css', express.static(__dirname + '/public/css'));
+app.use('/css', express.static('public/css'));
 
 
 console.log(path.join(application_root, 'public'));
