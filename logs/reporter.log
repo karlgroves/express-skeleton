@@ -118,3 +118,15 @@
 {"name":"expresstest","hostname":"Karls-MBP.home","pid":23477,"level":30,"msg":"expresstest listening at http://:::3000","time":"2016-10-27T23:12:16.089Z","v":0}
 {"name":"expresstest","hostname":"Karls-MBP.home","pid":23477,"level":30,"msg":"GET /","time":"2016-10-27T23:12:19.617Z","v":0}
 {"name":"expresstest","hostname":"Karls-MBP.home","pid":23487,"level":30,"msg":"expresstest listening at http://:::3000","time":"2016-10-27T23:12:20.162Z","v":0}
+{"name":"expresstest","hostname":"Karls-MBP.home","pid":23487,"level":30,"msg":"POST /","time":"2016-10-27T23:24:06.171Z","v":0}
+{"name":"expresstest","hostname":"Karls-MBP.home","pid":24625,"level":30,"msg":"expresstest listening at http://:::3000","time":"2016-10-27T23:24:06.901Z","v":0}
+{"name":"expresstest","hostname":"Karls-MBP.home","pid":24998,"level":30,"msg":"expresstest listening at http://:::3000","time":"2016-10-27T23:28:35.027Z","v":0}
+{"name":"expresstest","hostname":"Karls-MBP.home","pid":24998,"level":30,"msg":"POST /","time":"2016-10-27T23:29:44.728Z","v":0}
+{"name":"expresstest","hostname":"Karls-MBP.home","pid":25096,"level":30,"msg":"expresstest listening at http://:::3000","time":"2016-10-27T23:29:45.238Z","v":0}
+{"name":"expresstest","hostname":"Karls-MBP.home","pid":25096,"level":30,"msg":"GET /","time":"2016-10-27T23:31:59.937Z","v":0}
+{"name":"expresstest","hostname":"Karls-MBP.home","pid":25283,"level":30,"msg":"expresstest listening at http://:::3000","time":"2016-10-27T23:32:00.900Z","v":0}
+{"name":"expresstest","hostname":"Karls-MBP.home","pid":25338,"level":30,"msg":"expresstest listening at http://:::3000","time":"2016-10-27T23:32:40.332Z","v":0}
+{"name":"expresstest","hostname":"Karls-MBP.home","pid":25338,"level":30,"msg":"GET /","time":"2016-10-27T23:32:44.156Z","v":0}
+{"name":"expresstest","hostname":"Karls-MBP.home","pid":25351,"level":30,"msg":"expresstest listening at http://:::3000","time":"2016-10-27T23:32:44.645Z","v":0}
+{"name":"expresstest","hostname":"Karls-MBP.home","pid":25351,"level":30,"msg":"GET /","time":"2016-10-27T23:35:20.438Z","v":0}
+{"name":"expresstest","hostname":"Karls-MBP.home","pid":25573,"level":30,"msg":"expresstest listening at http://:::3000","time":"2016-10-27T23:35:21.107Z","v":0}

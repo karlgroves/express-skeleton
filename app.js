@@ -7,7 +7,6 @@ var application_root = __dirname,
   uuid = require('node-uuid'),
   express = require('express'),
   exphbs = require('express-handlebars'),
-  util = require('./lib/util'),
   favicon = require('serve-favicon'),
   bodyParser = require('body-parser'),
   session = require('express-session'),
@@ -20,6 +19,7 @@ require('./lib/logging')(config);
 var app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('trust proxy', 1);
+
 
 app.use(session({
   store: new FileStore({
@@ -34,12 +34,10 @@ app.use(session({
   cookie: {secure: true}
 }));
 
-
 app.engine('handlebars', exphbs({
   defaultLayout: 'main',
   layoutsDir: 'views/layouts/',
   partialsDir: 'views/partials/',
-  helpers: util
 }));
 
 app.set('view engine', 'handlebars');
@@ -101,7 +99,7 @@ app.post('/',
 
 app.get('/projects/', function (req, res){
   log.info(new Date(), req.method, req.url);
-  
+
   res.render('projects', {
     title: 'Projects'
   });
