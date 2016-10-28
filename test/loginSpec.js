@@ -3,15 +3,15 @@
 var assert = require('assert');
 
 beforeEach(function() {
-  browser.url('http://localhost:3000');
+  browser.url('http://localhost:3000/');
 });
 
 describe('Login', function() {
   
-  //it('should have "Login" as the page title', function() {
-  //  var title = browser.getTitle();
-  //  assert(title === 'Login');
-  //});
+  it('should have "Login" as the page title', function() {
+    var title = browser.getTitle();
+    assert(title === 'Login');
+  });
 
   it('should log in', function() {
     console.log(browser.getHTML('#login-form'));

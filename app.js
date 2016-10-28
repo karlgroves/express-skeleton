@@ -1,6 +1,6 @@
 'use strict';
 var application_root = __dirname,
-  pkg = require("./package.json"),
+  pkg = require('./package.json'),
   config = require('./config.json'),
   path = require('path'),
   fs = require('fs'),
@@ -21,7 +21,6 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('trust proxy', 1);
 
-
 app.use(session({
   store: new FileStore({
     encrypt: true
@@ -30,7 +29,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
   genid: function () {
-    return uuid.v4()
+    return uuid.v4();
   },
   cookie: {secure: true}
 }));
@@ -51,8 +50,8 @@ app.use(express.static(path.join(application_root, 'public')));
 
 app.get('/', function (req, res) {
   log.info(new Date(), req.method, req.url);
-  
-  if(req.session.authorized === true){
+
+  if (req.session.authorized === true) {
     return res.redirect('/projects');
   }
 
@@ -81,8 +80,8 @@ app.post('/',
 
       // Handle errors
       var eListHTML = '',
-          eList = req.form.errors,
-          eLength = eList.length;
+        eList = req.form.errors,
+        eLength = eList.length;
 
       eListHTML += '<p>There are ' + eLength + ' errors preventing successful submission of this form:</p>';
       eListHTML += '<ul>';
@@ -102,8 +101,8 @@ app.post('/',
       });
 
     } else {
-      console.log("Password:", req.form.password);
-      console.log("Email:", req.form.email);
+      console.log('Password:', req.form.password);
+      console.log('Email:', req.form.email);
 
       sess.email = req.form.email;
       sess.password = req.form.password;
@@ -147,7 +146,7 @@ var server = app.listen(app.get('port'), function (err, res) {
     log.error(err);
   }
   else {
-    log.info("%s listening at http://%s:%s", pkg.name, host, port);
+    log.info('%s listening at http://%s:%s', pkg.name, host, port);
     console.log('Go to Heaven for the climate, Hell for the company ~ Mark Twain');
   }
 });
