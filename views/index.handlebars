@@ -1,11 +1,11 @@
 <h1>{{{title}}}</h1>
 
 <div id="login-form">
-    <div id="global_errors"></div>
+    <div id="global_errors" role="alert">{{{formErrors}}}</div>
     <form method="post" action="/">
         <div>
             <label for="email">Email Address</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" value="{{{email}}}">
         </div>
         <div>
             <label for="password">Password</label>

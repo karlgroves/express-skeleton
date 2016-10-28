@@ -11,7 +11,8 @@ var application_root = __dirname,
   bodyParser = require('body-parser'),
   session = require('express-session'),
   form = require('express-form'),
-  field = form.field;
+  field = form.field,
+  filter = form.filter;
 
 var FileStore = require('session-file-store')(session);
 require('./lib/logging')(config);
@@ -45,21 +46,15 @@ app.set('views', path.join(application_root, 'views'));
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json()); // support json encoded bodies
-//app.use(express.static(path.join(application_root, 'public')));
-
-//app.use(express.static('public'));
-
-app.use('/css', express.static(__dirname + '/public/css'));
-
-
-console.log(path.join(application_root, 'public'));
+app.use(express.static(path.join(application_root, 'public')));
 
 
 app.get('/', function (req, res) {
   log.info(new Date(), req.method, req.url);
-  var sess = req.session;
-
-  //@TODO determine if they already have a valid session token. If so, redirect them to projects
+  
+  if(req.session.authorized === true){
+    return res.redirect('/projects');
+  }
 
   res.render('index', {
     title: 'Login'
@@ -71,8 +66,8 @@ app.post('/',
 
   // Form filter and validation middleware
   form(
-    field("password").trim().required(),
-    field("email").trim().required().isEmail()
+    field('password').trim().required(),
+    field('email').trim().required().isEmail()
   ),
 
   // Express request-handler now receives filtered and validated data
@@ -81,9 +76,30 @@ app.post('/',
     var sess = req.session;
 
     if (!req.form.isValid) {
+
+      console.log(typeof req.form.errors);
+
       // Handle errors
-      //console.log(req.form.errors);
-      res.send(req.form.errors);
+      var eListHTML = '',
+          eList = req.form.errors,
+          eLength = eList.length;
+
+      eListHTML += '<p>There are ' + eLength + ' errors preventing successful submission of this form:</p>';
+      eListHTML += '<ul>';
+
+      for (var i in eList) {
+        if (eList.hasOwnProperty(i)) {
+          eListHTML += '<li>' + eList[i] + '</li>';
+        }
+      }
+
+      eListHTML += '</ul>';
+
+      res.render('index', {
+        title: 'Login',
+        formErrors: eListHTML,
+        email: req.form.email
+      });
 
     } else {
       console.log("Password:", req.form.password);
@@ -91,13 +107,14 @@ app.post('/',
 
       sess.email = req.form.email;
       sess.password = req.form.password;
+      sess.authorized = true;
 
       return res.redirect('/projects');
     }
   }
 );
 
-app.get('/projects/', function (req, res){
+app.get('/projects/', function (req, res) {
   log.info(new Date(), req.method, req.url);
 
   res.render('projects', {
