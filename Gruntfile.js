@@ -14,13 +14,6 @@ module.exports = function (grunt) {
 
     datetime: Date.now(),
 
-    sass: {
-      dist: {
-        files: {
-          'public/css/main.css': 'public/css/main.scss'
-        }
-      }
-    },
 
     /* Run JSHint on our JS files */
     jshint: {
@@ -63,6 +56,30 @@ module.exports = function (grunt) {
       }
     },
 
+    webdriver: {
+      test: {
+        configFile: './wdio.conf.js'
+      }
+    },
+
+    selenium_standalone: {
+      options: {
+        stopOnExit: true
+      },
+      server: {
+        seleniumVersion: '2.53.0',
+        seleniumDownloadURL: 'http://selenium-release.storage.googleapis.com',
+        drivers: {
+          chrome: {
+            version: '2.25',
+            arch: process.arch,
+            baseURL: 'http://chromedriver.storage.googleapis.com'
+          }
+        }
+      }
+    },
+
+
     /* Watch tasks */
     watch: {
       gruntfile: {
@@ -81,5 +98,13 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('lint', ['jshint', 'jsonlint', 'travis-lint']);
-  grunt.registerTask('default', ['lint']);
+  
+  grunt.registerTask('default', [
+    'lint',
+    'selenium_standalone:server:install',
+    'selenium_standalone:server:start',
+    'webdriver:test',
+    'selenium_standalone:server:stop'
+  ]);
+
 };

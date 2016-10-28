@@ -27,6 +27,8 @@
     "browser": true,
     "describe": true,
     "beforeEach": true,
-    "it": true
+    "it": true,
+    "driver": true,
+    "By": true
   }
 }

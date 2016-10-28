@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "test",
+    "test": "grunt",
     "start": "node app.js"
   },
   "author": {
@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.17.5",
+    "chromedriver": "^2.24.1",
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-clean": "^1.0.0",
@@ -38,11 +39,16 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-githooks": "^0.6.0",
     "grunt-jsonlint": "^1.1.0",
+    "grunt-selenium-standalone": "^1.0.1",
     "grunt-travis-lint": "0.0.3",
+    "grunt-webdriver": "^2.0.2",
     "jshint-stylish": "^2.2.1",
     "load-grunt-tasks": "^3.5.2",
     "nodemon": "^1.11.0",
-    "time-grunt": "^1.4.0"
+    "time-grunt": "^1.4.0",
+    "wdio-dot-reporter": "0.0.6",
+    "wdio-mocha-framework": "^0.4.6",
+    "webdriverio": "^4.2.16"
   },
   "engines": {
     "node": ">=6.9.0"
