@@ -13,8 +13,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     datetime: Date.now(),
-
-
+    
     /* Run JSHint on our JS files */
     jshint: {
       options: {
