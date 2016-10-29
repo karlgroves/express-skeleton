@@ -2,13 +2,15 @@
 
 module.exports = function (app) {
   var form = require('express-form'),
-      field = form.field;
+    field = form.field,
+    config = require('../config.json');
+
 
   app.get('/', function (req, res) {
     log.info(new Date(), req.method, req.url);
 
     if (req.session.authorized === true) {
-      return res.redirect('/projects');
+      return res.redirect(config.loginLocation);
     }
 
     res.render('index', {
@@ -63,7 +65,7 @@ module.exports = function (app) {
         sess.password = req.form.password;
         sess.authorized = true;
 
-        return res.redirect('/projects');
+        return res.redirect(config.loginLocation);
       }
     }
   );
