@@ -13,7 +13,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     datetime: Date.now(),
-    
+
     /* Run JSHint on our JS files */
     jshint: {
       options: {
@@ -77,8 +77,7 @@ module.exports = function (grunt) {
         }
       }
     },
-
-
+    
     /* Watch tasks */
     watch: {
       gruntfile: {
@@ -97,7 +96,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('lint', ['jshint', 'jsonlint', 'travis-lint']);
-  
+
   grunt.registerTask('default', [
     'lint',
     'selenium_standalone:server:install',
