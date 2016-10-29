@@ -1,3 +1,4 @@
 {
-  "logFile": "./logs/reporter.log"
+  "logFile": "./logs/reporter.log",
+  "port": 3000
 }

@@ -18,7 +18,7 @@ var FileStore = require('session-file-store')(session);
 require('./lib/logging')(config);
 
 var app = express();
-app.set('port', process.env.PORT || 3000);
+app.set('port', config.port);
 app.set('trust proxy', 1);
 app.use(helmet());
 
@@ -36,7 +36,6 @@ app.use(session({
   cookie: {
     secure: true,
     httpOnly: true,
-    // Cookie will expire in 1 hour from when it's generated
     expires: new Date( Date.now() + 60 * 60 * 1000 )
   }
 }));
@@ -56,6 +55,14 @@ app.use(express.static(path.join(application_root, 'public')));
 
 // Include the routes file
 require('./routes')(app);
+
+
+app.get('*', function(req, res, next) {
+    res.render('error', {
+      title: '404 - Not Found',
+      message: 'The requested page was not found'
+    });
+});
 
 var server = app.listen(app.get('port'), function (err, res) {
   var host = server.address().address;
