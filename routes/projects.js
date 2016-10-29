@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function (app) {
 
   app.get('/projects/', function (req, res) {

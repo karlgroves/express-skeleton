@@ -12,8 +12,7 @@ var application_root = __dirname,
   session = require('express-session'),
   form = require('express-form'),
   field = form.field,
-  helmet = require('helmet'),
-  csrf = require('csurf');
+  helmet = require('helmet');
 
 var FileStore = require('session-file-store')(session);
 require('./lib/logging')(config);
@@ -22,13 +21,6 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('trust proxy', 1);
 app.use(helmet());
-app.use(csrf());
-
-app.use(function(req, res, next){
-  // Expose variable to templates via locals
-  res.locals.csrftoken = req.csrfToken();
-  next();
-});
 
 app.use(session({
   store: new FileStore({
