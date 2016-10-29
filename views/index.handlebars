@@ -3,6 +3,8 @@
 <div id="login-form">
     <div id="global_errors" role="alert">{{{formErrors}}}</div>
     <form method="post" action="/">
+        <input type="hidden" name="_csrf" value={{{csrftoken}}} />
+
         <div>
             <label for="email">Email Address</label>
             <input type="email" name="email" id="email" value="{{{email}}}">
