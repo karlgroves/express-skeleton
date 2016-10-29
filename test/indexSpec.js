@@ -14,6 +14,14 @@ describe('Login', function () {
     assert(title === 'Login');
   });
 
+  it('should fail log in', function () {
+    browser.click('#submit');
+    browser.pause(500);
+
+    var title = browser.getTitle();
+    assert(title === 'Login: There are 3 errors preventing login');
+  });
+  
   it('should log in', function () {
     browser.setValue('#email', 'me@example.com');
     var eValue = browser.getValue('#email');

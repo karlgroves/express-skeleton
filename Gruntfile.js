@@ -29,7 +29,7 @@ module.exports = function (grunt) {
         options: {
           jshintrc: '.jshintrc'
         },
-        src: ['app.js']
+        src: ['app.js', 'lib/*.js']
       },
       routes: {
         options: {
@@ -48,7 +48,7 @@ module.exports = function (grunt) {
     /* Run JSONLint on our configuration files */
     jsonlint: {
       configFiles: {
-        src: ['package.json', '.jshintrc']
+        src: ['package.json', '.jshintrc', 'config.json']
       }
     },
 

@@ -1,15 +1,17 @@
-<h1>{{{title}}}</h1>
+<h1>{{{mainHeading}}}</h1>
 
 <div id="login-form">
-    <div id="global_errors" role="alert">{{{formErrors}}}</div>
+    <div id="global_errors" role="alert" tabindex="-1">{{{formErrors}}}</div>
     <form method="post" action="/">
         <div>
             <label for="email">Email Address</label>
-            <input type="email" name="email" id="email" value="{{{email}}}">
+            <input type="email" name="email" id="email" value="{{{email}}}" aria-describedby="emailError" aria-required="true">
+            <div id="emailError">{{{emailError}}}</div>
         </div>
         <div>
             <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" aria-describedby="pwError" aria-required="true">
+            <div id="pwError">{{{pwError}}}</div>
         </div>
         <div><input type="submit" name="submit" id="submit" value="Log In"></div>
     </form>

@@ -56,8 +56,8 @@ app.use(express.static(path.join(application_root, 'public')));
 // Include the routes file
 require('./routes')(app);
 
-
-app.get('*', function(req, res, next) {
+// Quick & Dirty 404 handling
+app.get('*', function(req, res) {
     res.render('error', {
       title: '404 - Not Found',
       message: 'The requested page was not found'

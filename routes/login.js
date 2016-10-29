@@ -12,7 +12,8 @@ module.exports = function (app) {
     }
 
     res.render('index', {
-      title: 'Login'
+      title: 'Login',
+      mainHeading: 'Login'
     });
   });
 
@@ -22,7 +23,7 @@ module.exports = function (app) {
     // Form filter and validation middleware
     form(
       field('password').trim().required(),
-      field('email').trim().required().isEmail()
+      field('email').trim().toLowerCase().required().isEmail()
     ),
 
     // Express request-handler now receives filtered and validated data
@@ -37,7 +38,7 @@ module.exports = function (app) {
           eList = req.form.errors,
           eLength = eList.length;
 
-        eListHTML += '<p>There are ' + eLength + ' errors preventing successful submission of this form:</p>';
+        eListHTML += '<p>There are ' + eLength + ' errors preventing login:</p>';
         eListHTML += '<ol>';
 
         for (var i in eList) {
@@ -49,9 +50,12 @@ module.exports = function (app) {
         eListHTML += '</ol>';
 
         res.render('index', {
-          title: 'Login',
+          title: 'Login: There are ' + eLength + ' errors preventing login',
+          mainHeading: 'Login',
           formErrors: eListHTML,
-          email: req.form.email
+          email: req.form.email,
+          emailError: req.form.getErrors('email'),
+          pwError: req.form.getErrors('password')
         });
 
       } else {
