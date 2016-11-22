@@ -1,0 +1,15 @@
+<nav>
+    <h2>Navigation</h2>
+    <ul>
+        {{#each navOpts}}
+            <li><a href="{{path}}">{{label}}</a></li>
+        {{/each}}
+
+        {{#if isSignedIn}}
+            <li><a href="/logout">Logout</a></li>
+        {{else}}
+            <li><a href="/">Login</a></li>
+        {{/if}}
+    </ul>
+</nav>
+
