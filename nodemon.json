@@ -17,5 +17,5 @@
     "views/",
     "app.js"
   ],
-  "ext": "js json"
+  "ext": "js json handlebars"
 }
