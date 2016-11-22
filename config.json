@@ -1,5 +1,12 @@
 {
   "logFile": "./logs/reporter.log",
   "port": 3000,
-  "loginLocation": "/projects"
+  "loginLocation": "/projects",
+  "tenon": {
+    "key": "TENON_API_KEY_HERE",
+    "projectID": "DEFAULT_PROJECT",
+    "level": "AA",
+    "certainty": "80",
+    "endPoint": "https://tenon.io/api/index.php"
+  }
 }

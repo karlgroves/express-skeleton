@@ -43,7 +43,7 @@ app.use(session({
 app.engine('handlebars', exphbs({
   defaultLayout: 'main',
   layoutsDir: 'views/layouts/',
-  partialsDir: 'views/partials/',
+  partialsDir: 'views/partials/'
 }));
 
 app.set('view engine', 'handlebars');

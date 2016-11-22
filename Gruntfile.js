@@ -14,6 +14,8 @@ module.exports = function (grunt) {
 
     datetime: Date.now(),
 
+    clean: ['errorShots', 'logs', 'sessions'],
+    
     /* Run JSHint on our JS files */
     jshint: {
       options: {
