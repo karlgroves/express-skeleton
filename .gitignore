@@ -40,3 +40,4 @@ phantomjsdriver.log
 sessions/*
 logs/*
 errorShots/*
+config.json
