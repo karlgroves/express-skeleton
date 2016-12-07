@@ -12,7 +12,7 @@ module.exports = function (app) {
       return res.redirect(config.loginLocation);
     }
 
-    res.render('index', {
+    res.status(200).render('index', {
       title: 'Login',
       mainHeading: 'Login',
       curUrl: req.originalUrl
@@ -29,7 +29,7 @@ module.exports = function (app) {
     ),
 
     // Express request-handler now receives filtered and validated data
-    function (req, res, next) {
+    function (req, res) {
       log.info(new Date(), req.method, req.url);
 
       var sess = req.session;
@@ -52,7 +52,7 @@ module.exports = function (app) {
 
         eListHTML += '</ol>';
 
-        res.render('index', {
+        res.status(401).render('index', {
           title: 'Login: There are ' + eLength + ' errors preventing login',
           mainHeading: 'Login',
           formErrors: eListHTML,
@@ -69,7 +69,6 @@ module.exports = function (app) {
         
         return res.redirect(config.loginLocation);
       }
-      next();
     }
   );
   

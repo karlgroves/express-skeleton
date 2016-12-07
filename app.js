@@ -14,8 +14,7 @@ var application_root = __dirname,
   form = require('express-form'),
   field = form.field,
   helmet = require('helmet'),
-  helpers = require('handlebars-helpers'),
-  myHelpers = require('./lib/helpers.js');
+  helpers = require('handlebars-helpers');
 
 var FileStore = require('session-file-store')(session);
 require('./lib/logging')(config);
