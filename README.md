@@ -1,5 +1,7 @@
 #README
 
+[![Build Status](https://travis-ci.org/karlgroves/express-skeleton.svg?branch=master)](https://travis-ci.org/karlgroves/express-skeleton)
+
 This is a basic, stubbed out Express application. It is not a real project or a real website, but a step-off point to get you started.
 
 It contains stubbed out locations and example files for all templates, views, and Selenium tests.
