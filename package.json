@@ -51,7 +51,7 @@
     "grunt-jsonlint": "^1.1.0",
     "grunt-selenium-standalone": "^1.0.1",
     "grunt-travis-lint": "0.0.3",
-    "grunt-webdriver": "^2.0.2",
+    "grunt-webdriver": "^3.0.0",
     "jshint-stylish": "^2.2.1",
     "load-grunt-tasks": "^3.5.2",
     "nodemon": "^1.11.0",
