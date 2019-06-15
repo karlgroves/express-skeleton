@@ -48,7 +48,7 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-githooks": "^0.6.0",
-    "grunt-jsonlint": "^1.1.0",
+    "grunt-jsonlint": "^2.0.0",
     "grunt-selenium-standalone": "^1.0.1",
     "grunt-travis-lint": "0.0.3",
     "grunt-webdriver": "^2.0.2",
