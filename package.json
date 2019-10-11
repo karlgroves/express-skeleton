@@ -27,7 +27,7 @@
     "express": "^4.14.0",
     "express-form": "^0.12.6",
     "express-handlebars": "^3.0.0",
-    "express-session": "^1.14.1",
+    "express-session": "^1.17.0",
     "handlebars-helpers": "^0.7.5",
     "helmet": "^3.0.0",
     "node-cache": "^4.1.0",
