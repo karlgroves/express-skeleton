@@ -58,7 +58,7 @@
     "time-grunt": "^1.4.0",
     "wdio-dot-reporter": "0.0.6",
     "wdio-mocha-framework": "^0.5.4",
-    "webdriverio": "^4.2.16",
+    "webdriverio": "^5.16.0",
     "tenon-node": "^0.4.0"
   },
   "engines": {
