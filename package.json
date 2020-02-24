@@ -29,7 +29,7 @@
     "express-handlebars": "^3.0.0",
     "express-session": "^1.14.1",
     "handlebars-helpers": "^0.7.5",
-    "helmet": "^3.0.0",
+    "helmet": "^3.21.3",
     "node-cache": "^4.1.0",
     "node-uuid": "^1.4.7",
     "pm2": "^2.0.18",
