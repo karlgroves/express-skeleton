@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.17.5",
-    "chromedriver": "^2.24.1",
+    "chromedriver": "^81.0.0",
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-clean": "^1.0.0",
