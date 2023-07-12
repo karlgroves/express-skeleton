@@ -30,7 +30,7 @@
     "express-session": "^1.14.1",
     "handlebars-helpers": "^0.7.5",
     "helmet": "^3.0.0",
-    "node-cache": "^4.1.0",
+    "node-cache": "^5.0.1",
     "node-uuid": "^1.4.7",
     "pm2": "^4.2.0",
     "serve-favicon": "^2.3.0",
