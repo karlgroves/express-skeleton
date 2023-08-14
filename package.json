@@ -3,13 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "scripts": {
-    "test": "grunt",
-    "start": "node app.js"
-  },
+  "scripts": {},
   "author": {
     "name": "Karl Groves",
-    "email": "karl@karlgroves.com",
+    "email": "karlgroves@gmail.com",
     "url": "http://www.karlgroves.com"
   },
   "repository": {
@@ -21,47 +18,20 @@
   },
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "bunyan": "^1.8.3",
-    "debug": "^2.2.0",
-    "express": "^4.14.0",
+    "bunyan": "^1.8.15",
+    "express": "^4.18.2",
     "express-form": "^0.12.6",
-    "express-handlebars": "^4.0.0",
-    "express-session": "^1.14.1",
-    "handlebars-helpers": "^0.7.5",
-    "helmet": "^3.0.0",
-    "node-cache": "^5.0.1",
-    "node-uuid": "^1.4.7",
-    "pm2": "^4.2.0",
-    "serve-favicon": "^2.3.0",
-    "session-file-store": "^1.0.0"
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "handlebars-helpers": "^0.10.0",
+    "helmet": "^7.0.0",
+    "node-cache": "^5.1.2",
+    "node-uuid": "^1.4.8",
+    "pm2": "^5.3.0",
+    "serve-favicon": "^2.5.0",
+    "session-file-store": "^1.5.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.17.5",
-    "chromedriver": "^79.0.0",
-    "grunt": "^1.0.1",
-    "grunt-browser-sync": "^2.2.0",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-githooks": "^0.6.0",
-    "grunt-jsonlint": "^2.1.1",
-    "grunt-selenium-standalone": "^1.0.1",
-    "grunt-travis-lint": "0.0.3",
-    "grunt-webdriver": "^2.0.2",
-    "jshint-stylish": "^2.2.1",
-    "load-grunt-tasks": "^3.5.2",
-    "nodemon": "^2.0.0",
-    "time-grunt": "^1.4.0",
-    "wdio-dot-reporter": "0.0.6",
-    "wdio-mocha-framework": "^0.5.4",
-    "webdriverio": "^4.2.16",
-    "tenon-node": "^0.4.0"
-  },
-  "engines": {
-    "node": ">=6.5.0"
+    "nodemon": "^3.0.1"
   }
 }
